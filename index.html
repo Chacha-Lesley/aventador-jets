@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventador Jets — Private Aviation, Nairobi</title>
+  <meta name="description" content="Nairobi's premier private jet charter service. Tailored flights across Africa and beyond, available 24/7." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Feather Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Aventador Jets home">
+        <img src="images/logo.png" alt="Aventador Jets logo" class="nav__logo-img" />
+        <span class="nav__logo-name">Aventador Jets</span>
+        <span class="nav__logo-tag">Private Aviation — Nairobi</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="fleet.html" class="nav__link">Our Fleet</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Request a Quote</a>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="fleet.html" class="nav__link">Our Fleet</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="contact.html" class="nav__cta">Request a Quote</a>
+  </div>
+
+  <main>
+    <!-- ══ HERO ════════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="heroHeadline">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+          <span class="label">Private Charter Aviation</span>
+        </div>
+        <h1 id="heroHeadline" class="hero__headline">
+          The World,<br><em>On Your Terms.</em>
+        </h1>
+        <p class="hero__sub">
+          Nairobi-based, globally connected. Aventador Jets pairs exceptional aircraft with uncompromising service for travellers who expect nothing less.
+        </p>
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn--primary">
+            <svg data-feather="send" aria-hidden="true"></svg> Request a Charter
+          </a>
+          <a href="fleet.html" class="btn btn--ghost">
+            <svg data-feather="airplay" aria-hidden="true"></svg> View Our Fleet
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ══ STATS ═══════════════════════════════════════════════ -->
+    <div class="stats">
+      <div class="stats__inner container">
+        <div class="stats__item">
+          <div class="stats__num" data-target="200" data-suffix="+">200+</div>
+          <div class="stats__label">Destinations Served</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__num" data-target="24" data-suffix="/7">24/7</div>
+          <div class="stats__label">Availability</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__num" data-target="4.9" data-suffix="★">4.9★</div>
+          <div class="stats__label">Client Satisfaction</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__num" data-target="12" data-suffix=" yrs">12 yrs</div>
+          <div class="stats__label">Industry Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SERVICES ════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="services__header">
+          <div>
+            <p class="label" style="margin-bottom:16px">What We Offer</p>
+            <h2 id="servicesHeading" class="services__title display">
+              Charter Services Tailored to Every Journey
+            </h2>
+          </div>
+          <p class="services__intro">
+            From solo business travel to full group charters, each flight is planned and executed with meticulous care by our dedicated team.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">01</div>
+            <svg class="service-card__icon" data-feather="briefcase" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Business Charter</h3>
+            <p class="service-card__body">
+              Productive, private, and punctual. Board on your schedule with direct routing, dedicated crew, and onboard conference capability for executives who cannot afford delays.
+            </p>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">02</div>
+            <svg class="service-card__icon" data-feather="sun" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Leisure & Lifestyle</h3>
+            <p class="service-card__body">
+              Arrive refreshed at a safari lodge, coastal retreat, or international city. We curate every detail of the in-flight experience to set the tone for your journey.
+            </p>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">03</div>
+            <svg class="service-card__icon" data-feather="users" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Group Charter</h3>
+            <p class="service-card__body">
+              Corporate retreats, family milestones, or sporting delegations — our larger-cabin aircraft carry groups of up to 19 passengers in comfort, on a unified itinerary.
+            </p>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">04</div>
+            <svg class="service-card__icon" data-feather="package" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Air Cargo</h3>
+            <p class="service-card__body">
+              Time-critical freight across Africa. From pharmaceutical samples to high-value parcels, our cargo charters offer tracked, secure, door-to-ramp solutions.
+            </p>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">05</div>
+            <svg class="service-card__icon" data-feather="heart" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Medical Evacuation</h3>
+            <p class="service-card__body">
+              Swift, fully equipped air ambulance flights coordinated with medical personnel. Available 24 hours, with immediate response protocols across East Africa.
+            </p>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-card__number" aria-hidden="true">06</div>
+            <svg class="service-card__icon" data-feather="star" aria-hidden="true"></svg>
+            <h3 class="service-card__title">Concierge Services</h3>
+            <p class="service-card__body">
+              Ground transfers, hotel bookings, in-flight catering preferences, and destination arrangements — handled as one seamless experience by your dedicated flight coordinator.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ══ FLEET PREVIEW ═══════════════════════════════════════ -->
+    <section class="section fleet" aria-labelledby="fleetHeading">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <p class="fleet__label label">The Aircraft</p>
+            <h2 id="fleetHeading" class="fleet__title display">
+              A Fleet Chosen for Performance and Refinement
+            </h2>
+            <p class="fleet__body">
+              Every aircraft in our inventory is maintained to international airworthiness standards, operated by licensed pilots with thousands of logged hours across African airspace.
+            </p>
+            <div style="display:flex; gap:16px; flex-wrap:wrap;">
+              <a href="fleet.html" class="btn btn--outline">
+                <svg data-feather="grid" aria-hidden="true"></svg> Explore Full Fleet
+              </a>
+              <a href="contact.html" class="btn btn--ghost">
+                <svg data-feather="send" aria-hidden="true"></svg> Request an Aircraft
+              </a>
+            </div>
+          </div>
+          <div class="fleet__image fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&auto=format&fit=crop&q=80"
+              alt="Luxurious private jet cabin interior with leather seating"
+              loading="lazy"
+            />
+            <div class="fleet__image-caption">
+              <h4 class="display">Cessna Citation CJ3+</h4>
+              <div class="fleet__specs">
+                <span class="fleet__spec">
+                  <svg data-feather="users" aria-hidden="true"></svg> Up to 7 passengers
+                </span>
+                <span class="fleet__spec">
+                  <svg data-feather="map-pin" aria-hidden="true"></svg> Range 3,700 km
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ══ WHY AVENTADOR ═══════════════════════════════════════ -->
+    <section class="section" aria-labelledby="whyHeading">
+      <div class="container">
+        <p class="label" style="margin-bottom:20px">Why Aventador</p>
+        <h2 id="whyHeading" class="display" style="font-size:clamp(2rem,3.5vw,3.2rem); font-weight:300; margin-bottom:48px; max-width:500px; line-height:1.1;">
+          Uncompromising Standards on Every Flight
+        </h2>
+        <div class="why__grid">
+          <div class="why__item fade-up">
+            <svg class="why__icon" data-feather="shield" aria-hidden="true"></svg>
+            <h3 class="why__item-title">Safety First, Always</h3>
+            <p class="why__item-body">Rigorous maintenance schedules, licensed engineers, and pilots who undergo recurrent simulator training. Our safety record is the foundation our reputation rests on.</p>
+          </div>
+          <div class="why__item fade-up">
+            <svg class="why__icon" data-feather="globe" aria-hidden="true"></svg>
+            <h3 class="why__item-title">Global Reach</h3>
+            <p class="why__item-body">Operating from Wilson and Jomo Kenyatta airports, we connect Nairobi to 200+ destinations across Africa, the Middle East, and Europe without compromise.</p>
+          </div>
+          <div class="why__item fade-up">
+            <svg class="why__icon" data-feather="clock" aria-hidden="true"></svg>
+            <h3 class="why__item-title">Ready When You Are</h3>
+            <p class="why__item-body">Our operations team is available around the clock. From a same-day booking to a months-in-advance itinerary, we move at your pace.</p>
+          </div>
+          <div class="why__item fade-up">
+            <svg class="why__icon" data-feather="sliders" aria-hidden="true"></svg>
+            <h3 class="why__item-title">Fully Personalised</h3>
+            <p class="why__item-body">Catering, cabin configuration, ground logistics, special occasions — nothing is too specific. Your preferences are our instructions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DESTINATIONS ════════════════════════════════════════ -->
+    <section class="section--sm" aria-labelledby="destHeading">
+      <div class="container">
+        <p class="label" style="margin-bottom:16px">Popular Routes</p>
+        <h2 id="destHeading" class="display" style="font-size:clamp(2rem,3.5vw,3.2rem); font-weight:300; margin-bottom:40px; max-width:540px; line-height:1.1;">
+          From Nairobi to Everywhere
+        </h2>
+      </div>
+      <div class="container">
+        <div class="destinations__scroll" role="list">
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&auto=format&fit=crop&q=80" alt="Zanzibar coastline" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">Tanzania</p>
+              <h3 class="dest-card__city display">Zanzibar</h3>
+            </div>
+          </div>
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&auto=format&fit=crop&q=80" alt="Serengeti plains" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">Tanzania</p>
+              <h3 class="dest-card__city display">Serengeti</h3>
+            </div>
+          </div>
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&auto=format&fit=crop&q=80" alt="Dubai skyline at night" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">UAE</p>
+              <h3 class="dest-card__city display">Dubai</h3>
+            </div>
+          </div>
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&auto=format&fit=crop&q=80" alt="Cape Town cityscape" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">South Africa</p>
+              <h3 class="dest-card__city display">Cape Town</h3>
+            </div>
+          </div>
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=600&auto=format&fit=crop&q=80" alt="Lagos waterfront" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">Nigeria</p>
+              <h3 class="dest-card__city display">Lagos</h3>
+            </div>
+          </div>
+          <div class="dest-card" role="listitem">
+            <img src="https://images.unsplash.com/photo-1526285759904-71d1170ed2ac?w=600&auto=format&fit=crop&q=80" alt="London at dusk" loading="lazy" />
+            <div class="dest-card__overlay" aria-hidden="true"></div>
+            <div class="dest-card__info">
+              <p class="dest-card__region">United Kingdom</p>
+              <h3 class="dest-card__city display">London</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TESTIMONIALS ════════════════════════════════════════ -->
+    <section class="section testimonials" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <p class="label" style="margin-bottom:16px">Client Stories</p>
+        <h2 id="testimonialsHeading" class="display" style="font-size:clamp(2rem,3.5vw,3.2rem); font-weight:300; margin-bottom:48px; max-width:500px; line-height:1.1;">
+          What Travels With Our Clients
+        </h2>
+        <div class="testimonial-grid">
+          <article class="testimonial-card fade-up">
+            <div class="testimonial-card__quote" aria-hidden="true">&ldquo;</div>
+            <p class="testimonial-card__text">
+              The team arranged an entire East Africa circuit in under 48 hours. Every landing was on time, every cabin was immaculate. It redefined what business travel can be.
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <div class="testimonial-card__author-name">James O.</div>
+                <div class="testimonial-card__author-role">Managing Director, Nairobi</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-up">
+            <div class="testimonial-card__quote" aria-hidden="true">&ldquo;</div>
+            <p class="testimonial-card__text">
+              We flew a group of fourteen to the Masai Mara and back. Seamless coordination, exceptional food, and crew that genuinely cared. Our guests are still talking about it.
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <div class="testimonial-card__author-name">Amara N.</div>
+                <div class="testimonial-card__author-role">Events Director, Lagos</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-up">
+            <div class="testimonial-card__quote" aria-hidden="true">&ldquo;</div>
+            <p class="testimonial-card__text">
+              I have chartered jets across three continents. Aventador Jets delivers a level of personalisation that most operators simply cannot match. My Nairobi base of choice.
+            </p>
+            <div class="testimonial-card__author">
+              <div>
+                <div class="testimonial-card__author-name">Priya S.</div>
+                <div class="testimonial-card__author-role">Investment Banker, Dubai</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ QUOTE FORM ═══════════════════════════════════════════ -->
+    <section class="section quote" id="requestQuote" aria-labelledby="quoteHeading">
+      <div class="container">
+        <div class="quote__inner">
+          <div>
+            <p class="quote__label label">Get a Quote</p>
+            <h2 id="quoteHeading" class="quote__title display">
+              Your Flight Begins With a Conversation
+            </h2>
+            <p class="quote__body">
+              Fill in a few details and a member of our team will respond within two hours. For urgent departures, call us directly and we will mobilise immediately.
+            </p>
+            <div class="quote__contact-item">
+              <svg data-feather="phone" aria-hidden="true"></svg>
+              <a href="tel:+254723829381">+254 723 829 381</a>
+            </div>
+            <div class="quote__contact-item">
+              <svg data-feather="mail" aria-hidden="true"></svg>
+              <a href="mailto:info@aventador-jets.com">info@aventador-jets.com</a>
+            </div>
+            <div class="quote__contact-item">
+              <svg data-feather="map-pin" aria-hidden="true"></svg>
+              Wilson Airport, Langata Road, Nairobi
+            </div>
+          </div>
+          <div>
+            <form class="form" id="quoteForm" novalidate aria-label="Charter quote request">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="name">Full Name</label>
+                  <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email">Email Address</label>
+                  <input class="form__input" type="email" id="email" name="email" placeholder="you@email.com" required />
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="phone">Phone Number</label>
+                  <input class="form__input" type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="passengers">Passengers</label>
+                  <select class="form__select" id="passengers" name="passengers">
+                    <option value="">Select</option>
+                    <option>1 – 3</option>
+                    <option>4 – 7</option>
+                    <option>8 – 12</option>
+                    <option>13 – 19</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="departure">Departure City / Airport</label>
+                  <input class="form__input" type="text" id="departure" name="departure" placeholder="e.g. Nairobi (NBO)" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="destination">Destination</label>
+                  <input class="form__input" type="text" id="destination" name="destination" placeholder="e.g. Zanzibar (ZNZ)" />
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="date">Travel Date</label>
+                  <input class="form__input" type="date" id="date" name="date" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="type">Charter Type</label>
+                  <select class="form__select" id="type" name="type">
+                    <option value="">Select</option>
+                    <option>Business Charter</option>
+                    <option>Leisure Flight</option>
+                    <option>Group Charter</option>
+                    <option>Air Cargo</option>
+                    <option>Medical Evacuation</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="notes">Additional Requirements</label>
+                <textarea class="form__textarea" id="notes" name="notes" placeholder="Special catering, ground transfers, specific aircraft preferences, return dates…"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary form__submit">
+                <svg data-feather="send" aria-hidden="true"></svg>
+                Submit Request
+              </button>
+              <p class="form__note">We respond within 2 hours during business hours, and within 4 hours overnight. Your details are kept entirely confidential.</p>
+            </form>
+            <div class="form__success" id="formSuccess" role="alert">
+              <div class="form__success-icon">
+                <svg data-feather="check" aria-hidden="true"></svg>
+              </div>
+              <h3 class="form__success-title display">Request Received</h3>
+              <p class="form__success-body">Thank you. A member of our team will be in touch within two hours to confirm the details of your charter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA BANNER ══════════════════════════════════════════ -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container cta-banner__inner">
+        <h2 class="cta-banner__title display">
+          Wherever You Are Going,<br><em>We Will Get You There.</em>
+        </h2>
+        <p class="cta-banner__sub">Africa's skies, made personal. Contact our team today.</p>
+        <div class="cta-banner__actions">
+          <a href="tel:+254723829381" class="btn btn--primary">
+            <svg data-feather="phone" aria-hidden="true"></svg> Call Now
+          </a>
+          <a href="about.html" class="btn btn--ghost">
+            <svg data-feather="info" aria-hidden="true"></svg> About Aventador
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-name">Aventador Jets</div>
+          <div class="footer__brand-tag">Private Aviation — Nairobi</div>
+          <p class="footer__brand-body">
+            Nairobi-based private jet charter specialists serving business and leisure travellers across Africa, the Middle East, and Europe with safety, discretion, and unmatched personalisation.
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigation</div>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links" role="list">
+            <li><a href="contact.html">Business Charter</a></li>
+            <li><a href="contact.html">Leisure Flights</a></li>
+            <li><a href="contact.html">Group Charter</a></li>
+            <li><a href="contact.html">Air Cargo</a></li>
+            <li><a href="contact.html">Medical Evacuation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <ul class="footer__links" role="list">
+            <li><a href="tel:+254723829381">+254 723 829 381</a></li>
+            <li><a href="mailto:info@aventador-jets.com">info@aventador-jets.com</a></li>
+            <li>5th Avenue Suites, Nairobi</li>
+            <li>Ngong Road, Kenya</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Aventador Jets Limited. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Safety Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Initialise Feather icons after DOM ready
+    feather.replace({ 'stroke-width': 1.5, width: '100%', height: '100%' });
+  </script>
+</body>
+</html>

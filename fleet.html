@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Fleet — Aventador Jets</title>
+  <meta name="description" content="Explore Aventador Jets' fleet of meticulously maintained private aircraft, from light jets to long-range cabins for up to 19 passengers." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <style>
+    /* Fleet-page specific styles */
+    .fleet-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .fleet-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+    .fleet-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    .fleet-filter__btn {
+      font-family: var(--ff-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 9px 20px;
+      border: 1px solid var(--border);
+      color: var(--ivory-dim);
+      background: transparent;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .fleet-filter__btn:hover,
+    .fleet-filter__btn.active {
+      border-color: var(--copper);
+      color: var(--copper);
+    }
+    .fleet-note {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--copper);
+      padding: 20px 24px;
+      font-size: 0.8rem;
+      color: var(--ivory-dim);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    @media(max-width:860px) {
+      .fleet-hero__inner { grid-template-columns: 1fr; gap:32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Aventador Jets home">
+        <img src="images/logo.png" alt="Aventador Jets logo" class="nav__logo-img" />
+        <span class="nav__logo-name">Aventador Jets</span>
+        <span class="nav__logo-tag">Private Aviation — Nairobi</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="fleet.html" class="nav__link">Our Fleet</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Request a Quote</a>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="fleet.html" class="nav__link">Our Fleet</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="contact.html" class="nav__cta">Request a Quote</a>
+  </div>
+
+  <main>
+    <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
+    <div class="fleet-hero">
+      <div class="container fleet-hero__inner">
+        <div>
+          <p class="label" style="margin-bottom:20px">The Aircraft</p>
+          <h1 class="display" style="font-size:clamp(2.8rem,5vw,5.5rem); font-weight:300; line-height:1.0; letter-spacing:-0.02em;">
+            Our Fleet,<br><em style="color:var(--copper);">Your Canvas</em>
+          </h1>
+        </div>
+        <p style="font-size:0.88rem; color:var(--ivory-dim); line-height:1.9; max-width:480px; align-self:end;">
+          Every aircraft operates to strict international airworthiness standards. Our fleet spans light jets ideal for short African hops to wide-cabin turboprops and mid-range jets suited for continent-crossing journeys. Select the right aircraft for your mission below.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ FLEET GRID ══════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="fleetGridHeading">
+      <div class="container">
+        <h2 id="fleetGridHeading" class="sr-only">Full fleet listing</h2>
+
+        <!-- Filter -->
+        <div class="fleet-filter" role="group" aria-label="Filter aircraft by category">
+          <button class="fleet-filter__btn active" data-filter="all">All Aircraft</button>
+          <button class="fleet-filter__btn" data-filter="turboprop">Turboprop</button>
+          <button class="fleet-filter__btn" data-filter="light">Light Jet</button>
+          <button class="fleet-filter__btn" data-filter="midsize">Midsize Jet</button>
+          <button class="fleet-filter__btn" data-filter="heavy">Heavy Jet</button>
+        </div>
+
+        <div class="fleet-note">
+          <strong style="color:var(--ivory);">Charter availability varies.</strong> Aircraft shown are representative of our operated and brokered fleet. Our team will confirm the best-fit aircraft for your specific route, date, and group size upon enquiry.
+        </div>
+
+        <!-- Aircraft Cards -->
+        <div class="fleet-grid" id="fleetGrid">
+
+          <!-- Caravan 208B -->
+          <article class="fleet-card fade-up" data-category="turboprop">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1575254526670-f793c5b373e3?w=700&auto=format&fit=crop&q=80" alt="Cessna Grand Caravan 208B in flight over savannah" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Turboprop</div>
+              <h2 class="fleet-card__name">Cessna Grand Caravan 208B</h2>
+              <p class="fleet-card__desc">The workhorse of East African skies. The Grand Caravan reaches remote bush strips and short grass runways that jets cannot access, making it indispensable for safari transfers and cargo hops.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 9</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">1,500 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">344 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.3 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+          <!-- King Air 350 -->
+          <article class="fleet-card fade-up" data-category="turboprop">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=700&auto=format&fit=crop&q=80" alt="Beechcraft King Air 350 on airport apron" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Turboprop</div>
+              <h2 class="fleet-card__name">Beechcraft King Air 350</h2>
+              <p class="fleet-card__desc">An executive favourite across East Africa. The King Air 350 pairs turboprop reliability with a pressurised, stand-up-height cabin and genuine intercontinental flexibility for the region.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 11</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">2,900 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">583 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.45 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+          <!-- Citation CJ3+ -->
+          <article class="fleet-card fade-up" data-category="light">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=700&auto=format&fit=crop&q=80" alt="Cessna Citation CJ3 light jet interior" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Light Jet</div>
+              <h2 class="fleet-card__name">Cessna Citation CJ3+</h2>
+              <p class="fleet-card__desc">Nimble, efficient, and impeccably appointed. The CJ3+ is built for the discerning solo traveller or small executive group requiring swift, point-to-point connections without commercial constraints.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 7</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">3,700 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">787 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.47 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+          <!-- Phenom 300E -->
+          <article class="fleet-card fade-up" data-category="light">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=700&auto=format&fit=crop&q=80" alt="Embraer Phenom 300E in flight" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Light Jet</div>
+              <h2 class="fleet-card__name">Embraer Phenom 300E</h2>
+              <p class="fleet-card__desc">The world's best-selling light jet for a decade running. A flat-floor cabin, generous luggage capacity, and best-in-class range make the Phenom 300E the benchmark for short-to-mid trips.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 8</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">3,650 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">834 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.52 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+          <!-- Hawker 900XP -->
+          <article class="fleet-card fade-up" data-category="midsize">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&auto=format&fit=crop&q=80" alt="Midsize private jet interior cabin" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Midsize Jet</div>
+              <h2 class="fleet-card__name">Hawker 900XP</h2>
+              <p class="fleet-card__desc">A stand-up cabin, full galley, and enclosed lavatory combine with transatlantic-capable range to serve executive travellers on full-day missions across Africa and the Middle East.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 9</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">5,600 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">852 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.75 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+          <!-- Legacy 600 -->
+          <article class="fleet-card fade-up" data-category="heavy">
+            <div class="fleet-card__img">
+              <img src="https://images.unsplash.com/photo-1569629743817-70d8db6c323b?w=700&auto=format&fit=crop&q=80" alt="Embraer Legacy 600 large cabin private jet" loading="lazy" />
+            </div>
+            <div class="fleet-card__body">
+              <div class="fleet-card__type">Heavy Jet</div>
+              <h2 class="fleet-card__name">Embraer Legacy 600</h2>
+              <p class="fleet-card__desc">One of Africa's premier large-cabin jets. The Legacy 600 seats up to 13 passengers in a three-zone cabin with full galley, crew rest area, and the range to fly Nairobi to Europe non-stop.</p>
+              <div class="fleet-card__stats">
+                <div>
+                  <div class="fleet-card__stat-label">Passengers</div>
+                  <div class="fleet-card__stat-val display">Up to 13</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Range</div>
+                  <div class="fleet-card__stat-val display">6,000 km</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cruise Speed</div>
+                  <div class="fleet-card__stat-val display">850 km/h</div>
+                </div>
+                <div>
+                  <div class="fleet-card__stat-label">Cabin Height</div>
+                  <div class="fleet-card__stat-val display">1.83 m</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">
+                <svg data-feather="send" aria-hidden="true"></svg> Request This Aircraft
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /fleet-grid -->
+      </div>
+    </section>
+
+    <!-- ══ CTA BANNER ══════════════════════════════════════════ -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container cta-banner__inner">
+        <h2 class="cta-banner__title display">
+          Not Sure Which Aircraft<br><em>Fits Your Journey?</em>
+        </h2>
+        <p class="cta-banner__sub">Our team will recommend the optimal aircraft for your route, group size, and budget — at no obligation.</p>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn--primary">
+            <svg data-feather="send" aria-hidden="true"></svg> Get a Recommendation
+          </a>
+          <a href="tel:+254723829381" class="btn btn--ghost">
+            <svg data-feather="phone" aria-hidden="true"></svg> Call Us Directly
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-name">Aventador Jets</div>
+          <div class="footer__brand-tag">Private Aviation — Nairobi</div>
+          <p class="footer__brand-body">Nairobi-based private jet charter specialists serving business and leisure travellers across Africa, the Middle East, and Europe.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigation</div>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links" role="list">
+            <li><a href="contact.html">Business Charter</a></li>
+            <li><a href="contact.html">Leisure Flights</a></li>
+            <li><a href="contact.html">Group Charter</a></li>
+            <li><a href="contact.html">Air Cargo</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <ul class="footer__links" role="list">
+            <li><a href="tel:+254723829381">+254 723 829 381</a></li>
+            <li><a href="mailto:info@aventador-jets.com">info@aventador-jets.com</a></li>
+            <li>5th Avenue Suites, Ngong Road, Nairobi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Aventador Jets Limited. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Safety Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>feather.replace({ 'stroke-width': 1.5, width: '100%', height: '100%' });</script>
+</body>
+</html>
