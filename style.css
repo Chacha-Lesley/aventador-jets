@@ -1266,23 +1266,34 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
-  .grid-3, .fleet-grid, .team__grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-3, .fleet-grid, .team__grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .footer__top { grid-template-columns: 1fr 1fr; }
   .cert__list { grid-template-columns: repeat(2, 1fr); }
   .cert-item:nth-child(2) { border-right: none; }
   .cert-item { border-bottom: 1px solid var(--border); }
   .cert-item:nth-last-child(-n+2) { border-bottom: none; }
+  .hero__scroll { right: 24px; }
 }
 @media (max-width: 860px) {
-  .container { padding: 0 24px; }
-  .hero__content { padding: 0 24px 80px; }
-  .section { padding: 80px 0; }
-  .grid-2, .quote__inner, .contact__grid, .page-hero__inner { grid-template-columns: 1fr; gap: 40px; }
-  .services__header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .container { padding: 0 20px; }
+  .hero__content { padding: 0 20px 70px; }
+  .section { padding: 70px 0; }
+  .section--sm { padding: 55px 0; }
+  .grid-2, .quote__inner, .contact__grid, .page-hero__inner { grid-template-columns: 1fr; gap: 36px; }
+  .services__header { flex-direction: column; align-items: flex-start; gap: 24px; }
   .fleet-grid, .team__grid, .testimonial-grid { grid-template-columns: 1fr; }
   .why__grid { grid-template-columns: 1fr; }
-  .why__item:nth-child(2n) { border-right: 1px solid var(--border); }
+  .why__item:nth-child(2n) { border-right: none; }
   .why__item { border-right: none; }
+  .hero__scroll { display: none; }
+  .hero__headline { font-size: clamp(2.6rem, 8vw, 4.2rem); }
+  .hero__sub { max-width: 100%; }
+  .hero__actions { justify-content: flex-start; }
+  .fleet-card__stats { grid-template-columns: 1fr; }
+  .fleet-card__body { padding: 24px; }
+  .fleet__image-caption { padding: 24px 20px 18px; }
+  .fleet__specs { gap: 12px; }
+  .contact__map { aspect-ratio: 16 / 10; }
   .stats__inner { flex-wrap: wrap; }
   .stats__item { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
   .stats__item:nth-child(2n) { border-right: none; }
@@ -1294,4 +1305,38 @@ footer {
   .form__row { grid-template-columns: 1fr; }
   .cert__list { grid-template-columns: 1fr; }
   .cert-item { border-right: none !important; }
+}
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
+  .section--sm { padding: 45px 0; }
+  .nav__inner { padding: 0 16px; }
+  .nav__logo { gap: 10px; }
+  .nav__logo-name { font-size: 1.2rem; }
+  .nav__logo-tag { display: none; }
+  .nav__hamburger { padding: 8px; }
+  .nav__mobile { padding: 32px 20px; align-items: flex-start; justify-content: flex-start; gap: 24px; }
+  .nav__mobile .nav__link { font-size: 1rem; text-align: left; }
+  .service-card { padding: 32px 24px; }
+  .why__item { padding: 30px 24px; }
+  .contact__detail { flex-direction: column; align-items: flex-start; }
+  .contact__detail-icon { width: 36px; height: 36px; }
+  .form__label { font-size: 0.72rem; }
+  .form__input, .form__select, .form__textarea { padding: 14px 14px; }
+  .form__submit { padding: 16px; }
+  .footer__bottom { flex-direction: column; align-items: stretch; }
+  .footer__legal { justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 12px; }
+  .cta-banner { padding: 70px 0; }
+  .cta-banner__title { font-size: clamp(2rem, 7vw, 3.6rem); }
+}
+@media (max-width: 500px) {
+  .hero__headline { font-size: clamp(2.1rem, 8vw, 2.8rem); }
+  .hero__sub { font-size: 0.92rem; }
+  .dest-card { min-width: 220px; height: 300px; }
+  .dest-card__city { font-size: 1.7rem; }
+  .hero__actions { gap: 14px; }
+  .fleet-card__stats { gap: 14px; }
+  .page-hero__img-frame { bottom: -10px; left: -10px; width: calc(100% - 20px); height: calc(100% - 20px); }
+  .footer__copy { text-align: center; width: 100%; }
+  .footer__legal { flex-direction: column; align-items: stretch; gap: 10px; }
 }
