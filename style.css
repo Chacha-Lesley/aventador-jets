@@ -263,12 +263,31 @@ hr.rule {
   text-transform: uppercase;
   text-decoration: none;
   box-shadow: 0 18px 60px rgba(37, 211, 102, 0.24);
-  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition), opacity var(--transition);
+}
+.fab svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.fab.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(120px);
 }
 .fab:hover,
 .fab:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 24px 78px rgba(37, 211, 102, 0.28);
+}
+@media(max-width: 680px) {
+  .fab {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 14px;
+    font-size: 0.75rem;
+  }
 }
 
 /* ============================================================

@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
+  const fab = document.querySelector('.fab');
+  if (fab) {
+    let lastScrollY = window.scrollY;
+    const handleFabScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      fab.classList.toggle('hidden', isScrollingDown && currentScrollY > 120);
+      lastScrollY = currentScrollY;
+    };
+    window.addEventListener('scroll', handleFabScroll, { passive: true });
+    handleFabScroll();
+  }
+
   /* ── Mobile hamburger ─────────────────────────────────────── */
   const hamburger = document.querySelector('.nav__hamburger');
   const mobileMenu = document.querySelector('.nav__mobile');
